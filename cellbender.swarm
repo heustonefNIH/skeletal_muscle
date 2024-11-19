@@ -1,0 +1,11 @@
+cd /data/cellranger/FC/outs; \
+cellbender remove-background --cpu-threads 16 --input /data/cellranger/FC/outs/raw_feature_bc_matrix.h5 --output /data/cellranger/FC/outs/FC-cb_feature_bc_matrix.h5
+
+cd /data/cellranger/FN/outs; \
+cellbender remove-background --cpu-threads 16 --input /data/cellranger/FN/outs/raw_feature_bc_matrix.h5 --output /data/cellranger/FN/outs/FN-cb_feature_bc_matrix.h5
+
+cd /data/cellranger/SN/outs; \
+cellbender remove-background --cpu-threads 16 --input /data/cellranger/SN/outs/raw_feature_bc_matrix.h5 --output /data/cellranger/SN/outs/SN-cb_feature_bc_matrix.h5
+
+cd /data/cellranger/SC/outs; \
+cellbender remove-background --cpu-threads 16 --input /data/cellranger/SC/outs/raw_feature_bc_matrix.h5 --output /data/cellranger/SC/outs/SC-cb_feature_bc_matrix.h5

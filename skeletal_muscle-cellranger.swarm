@@ -1,0 +1,50 @@
+#swarm -f skeletal_muscle-cellranger.swarm  -g 64 -t 12 --time=48:00:00 --merge-output --module cellranger --sbatch "--mail-type=BEGIN,END,FAIL"
+
+FASTQ_PATH=/data/fastqs; \
+ulimit -u 10240 -n 16384; \
+cellranger count --id=SC \
+	 --transcriptome=$CELLRANGER_REF/refdata-gex-GRCh38-2020-A \
+	 --fastqs="$FASTQ_PATH" \
+	 --sample=EH010 \
+	 --expect-cells=25000 \
+	 --localcores=$SLURM_CPUS_PER_TASK \
+	 --localmem=34 \
+	 --jobmode=slurm \
+	 --maxjobs=10
+
+FASTQ_PATH=/data/fastqs; \
+ulimit -u 10240 -n 16384; \
+cellranger count --id=FN \
+	 --transcriptome=$CELLRANGER_REF/refdata-gex-GRCh38-2020-A \
+	 --fastqs="$FASTQ_PATH" \
+	 --sample=EH008 \
+	 --expect-cells=15000 \
+	 --localcores=$SLURM_CPUS_PER_TASK \
+	 --localmem=34 \
+	 --jobmode=slurm \
+	 --maxjobs=10
+
+FASTQ_PATH=/data/fastqs; \
+ulimit -u 10240 -n 16384; \
+cellranger count --id=SN \
+	 --transcriptome=$CELLRANGER_REF/refdata-gex-GRCh38-2020-A \
+	 --fastqs="$FASTQ_PATH" \
+	 --sample=EH009 \
+	 --expect-cells=40000 \
+	 --localcores=$SLURM_CPUS_PER_TASK \
+	 --localmem=34 \
+	 --jobmode=slurm \
+	 --maxjobs=10
+
+FASTQ_PATH=/data/fastqs; \
+ulimit -u 10240 -n 16384; \
+cellranger count --id=FC \
+	 --transcriptome=$CELLRANGER_REF/refdata-gex-GRCh38-2020-A \
+	 --fastqs="$FASTQ_PATH" \
+	 --sample=EH007 \
+	 --expect-cells=20000 \
+	 --localcores=$SLURM_CPUS_PER_TASK \
+	 --localmem=34 \
+	 --jobmode=slurm \
+	 --maxjobs=10
+

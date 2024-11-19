@@ -1,0 +1,5 @@
+SampleID	Load	Prep	Chemistry	Estimated load count	Estimated capture count	Batch	Index TT
+FC	Cells	Filtered	5Pv2 GEX	40000	20000	batch1	E11
+FN	Nuclei	Filtered	5Pv2 GEX	30000	15000	batch1	A8
+SN	Nuclei	Sorted	5Pv2 GEX	80000	40000	batch1	A9
+SC	Cells	Sorted	5Pv2 GEX	40000	25000	batch1	A10
